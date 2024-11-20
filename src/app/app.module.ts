@@ -29,6 +29,8 @@ import {MatSortModule} from "@angular/material/sort";
 import {MatDatepickerModule} from "@angular/material/datepicker";
 import {MatNativeDateModule} from "@angular/material/core";
 import {MatSelectModule} from "@angular/material/select";
+import { ProductItemDialogComponent } from './components/product-item-dialog/product-item-dialog.component';
+import {MatDialogModule} from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -40,7 +42,8 @@ import {MatSelectModule} from "@angular/material/select";
     ListBillsComponent,
     GetBillComponent,
     ListProductsComponent,
-    GetProductComponent
+    GetProductComponent,
+    ProductItemDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +66,7 @@ import {MatSelectModule} from "@angular/material/select";
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
+    MatDialogModule
   ],
   providers: [
     provideAnimationsAsync()
