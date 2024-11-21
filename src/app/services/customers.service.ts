@@ -15,4 +15,9 @@ export class CustomersService {
   public getCustomers(): Observable<RestCustomer> {
     return this.http.get<RestCustomer>( `${environment.baseUrl}${this.urlService}` );
   }
+  public createCustomer(customer: Customer): Observable<Customer> {
+    return this.http.post<Customer>(`${environment.baseUrl}${this.urlService}`, customer,{
+      withCredentials: true
+    });
+  }
 }
