@@ -20,14 +20,14 @@ export class NewCustomerComponent implements OnInit{
   }
 
   async AddCustomer() {
-     let customer = this.customerForm.value;
+     let customer:Customer = this.customerForm.value;
      console.log("Customer Data: ",customer);
      this.customerService.createCustomer(customer).subscribe({
-       next: (data) => {
+       next: data => {
          console.log(data);
        },
-       error: (err) => {
-         console.log(err);
+       error: err => {
+         console.log("Error: ",err);
        }
      })
   }

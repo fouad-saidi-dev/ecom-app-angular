@@ -10,14 +10,13 @@ import {Customer, RestCustomer} from "../models/customer.model";
 export class CustomersService {
 
   urlService = '/customer-service/api/customers';
+  url = 'http://localhost:8081/api/customers';
   constructor(private http: HttpClient) { }
 
   public getCustomers(): Observable<RestCustomer> {
     return this.http.get<RestCustomer>( `${environment.baseUrl}${this.urlService}` );
   }
   public createCustomer(customer: Customer): Observable<Customer> {
-    return this.http.post<Customer>(`${environment.baseUrl}${this.urlService}`, customer,{
-      withCredentials: true
-    });
+    return this.http.post<Customer>(`${environment.baseUrl}${this.urlService}`, customer);
   }
 }

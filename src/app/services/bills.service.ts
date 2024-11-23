@@ -15,4 +15,8 @@ export class BillsService {
   public getBills(): Observable<Array<Bill>> {
     return this.http.get<Array<Bill>>( `${environment.baseUrl}${this.urlService}` );
   }
+
+  createBill(bill: Bill):Observable<Bill> {
+    return this.http.post<Bill>(`${environment.baseUrl}${this.urlService}/new`,bill);
+  }
 }

@@ -7,6 +7,8 @@ import {ListProductsComponent} from "./products/list-products/list-products.comp
 import {GetCustomerComponent} from "./customers/get-customer/get-customer.component";
 import {GetProductComponent} from "./products/get-product/get-product.component";
 import {ListBillsComponent} from "./bills/list-bills/list-bills.component";
+import {NewBillComponent} from "./bills/new-bill/new-bill.component";
+import {NewProductComponent} from "./products/new-product/new-product.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
@@ -17,8 +19,10 @@ const routes: Routes = [
       {path:'new-customer',component:NewCustomerComponent},
       {path:'customers/:id',component:GetCustomerComponent},
       {path:'products',component:ListProductsComponent},
+      {path:'new-product',component:NewProductComponent},
       {path:'products/:id',component:GetProductComponent},
       {path:'bills',component:ListBillsComponent},
+      {path:'new-bill',component:NewBillComponent}
     ]
   }
 ];

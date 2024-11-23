@@ -14,7 +14,7 @@ import {ProductItemDialogComponent} from "../../components/product-item-dialog/p
 export class ListBillsComponent implements OnInit{
   public bills: any;
   public dataSource: any;
-  public displayedColumns = ['id', 'billingDate','actions'];
+  public displayedColumns = ['id', 'customerName','billingDate','actions'];
   constructor(private billsService:BillsService,private dialog:MatDialog) {
   }
   @ViewChild(MatPaginator) paginator!: MatPaginator;

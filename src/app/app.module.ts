@@ -31,6 +31,8 @@ import {MatNativeDateModule} from "@angular/material/core";
 import {MatSelectModule} from "@angular/material/select";
 import { ProductItemDialogComponent } from './components/product-item-dialog/product-item-dialog.component';
 import {MatDialogModule} from "@angular/material/dialog";
+import { NewBillComponent } from './bills/new-bill/new-bill.component';
+import { NewProductComponent } from './products/new-product/new-product.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import {MatDialogModule} from "@angular/material/dialog";
     GetBillComponent,
     ListProductsComponent,
     GetProductComponent,
-    ProductItemDialogComponent
+    ProductItemDialogComponent,
+    NewBillComponent,
+    NewProductComponent
   ],
   imports: [
     BrowserModule,
