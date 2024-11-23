@@ -13,11 +13,8 @@ import {MatMenuModule} from "@angular/material/menu";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatListModule} from "@angular/material/list";
 import {MatIconModule} from "@angular/material/icon";
-import { GetCustomerComponent } from './customers/get-customer/get-customer.component';
 import { ListBillsComponent } from './bills/list-bills/list-bills.component';
-import { GetBillComponent } from './bills/get-bill/get-bill.component';
 import { ListProductsComponent } from './products/list-products/list-products.component';
-import { GetProductComponent } from './products/get-product/get-product.component';
 import {MatCardModule} from "@angular/material/card";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
@@ -33,6 +30,10 @@ import { ProductItemDialogComponent } from './components/product-item-dialog/pro
 import {MatDialogModule} from "@angular/material/dialog";
 import { NewBillComponent } from './bills/new-bill/new-bill.component';
 import { NewProductComponent } from './products/new-product/new-product.component';
+import { EditCustomerComponent } from './customers/edit-customer/edit-customer.component';
+import { EditProductComponent } from './products/edit-product/edit-product.component';
+import { EditBillComponent } from './bills/edit-bill/edit-bill.component';
+import {MatProgressSpinner} from "@angular/material/progress-spinner";
 
 @NgModule({
   declarations: [
@@ -40,14 +41,14 @@ import { NewProductComponent } from './products/new-product/new-product.componen
     ListCustomersComponent,
     NewCustomerComponent,
     NavBarComponent,
-    GetCustomerComponent,
     ListBillsComponent,
-    GetBillComponent,
     ListProductsComponent,
-    GetProductComponent,
     ProductItemDialogComponent,
     NewBillComponent,
-    NewProductComponent
+    NewProductComponent,
+    EditCustomerComponent,
+    EditProductComponent,
+    EditBillComponent
   ],
   imports: [
     BrowserModule,
@@ -70,7 +71,8 @@ import { NewProductComponent } from './products/new-product/new-product.componen
     MatDatepickerModule,
     MatNativeDateModule,
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    MatProgressSpinner
   ],
   providers: [
     provideAnimationsAsync()

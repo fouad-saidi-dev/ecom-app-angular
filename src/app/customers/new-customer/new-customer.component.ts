@@ -33,6 +33,6 @@ export class NewCustomerComponent implements OnInit{
   }
 
   onCancel() {
-
+     this.customerForm.reset();
   }
 }

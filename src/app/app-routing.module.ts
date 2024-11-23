@@ -4,11 +4,11 @@ import {NavBarComponent} from "./components/nav-bar/nav-bar.component";
 import {ListCustomersComponent} from "./customers/list-customers/list-customers.component";
 import {NewCustomerComponent} from "./customers/new-customer/new-customer.component";
 import {ListProductsComponent} from "./products/list-products/list-products.component";
-import {GetCustomerComponent} from "./customers/get-customer/get-customer.component";
-import {GetProductComponent} from "./products/get-product/get-product.component";
 import {ListBillsComponent} from "./bills/list-bills/list-bills.component";
 import {NewBillComponent} from "./bills/new-bill/new-bill.component";
 import {NewProductComponent} from "./products/new-product/new-product.component";
+import {EditCustomerComponent} from "./customers/edit-customer/edit-customer.component";
+import {EditProductComponent} from "./products/edit-product/edit-product.component";
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
@@ -17,10 +17,10 @@ const routes: Routes = [
     children: [
       {path:'customers',component:ListCustomersComponent},
       {path:'new-customer',component:NewCustomerComponent},
-      {path:'customers/:id',component:GetCustomerComponent},
+      {path:'edit-customer/:id',component:EditCustomerComponent},
       {path:'products',component:ListProductsComponent},
       {path:'new-product',component:NewProductComponent},
-      {path:'products/:id',component:GetProductComponent},
+      {path:'edit-product/:id',component:EditProductComponent},
       {path:'bills',component:ListBillsComponent},
       {path:'new-bill',component:NewBillComponent}
     ]

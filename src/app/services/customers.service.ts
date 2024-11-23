@@ -10,7 +10,6 @@ import {Customer, RestCustomer} from "../models/customer.model";
 export class CustomersService {
 
   urlService = '/customer-service/api/customers';
-  url = 'http://localhost:8081/api/customers';
   constructor(private http: HttpClient) { }
 
   public getCustomers(): Observable<RestCustomer> {
@@ -18,5 +17,13 @@ export class CustomersService {
   }
   public createCustomer(customer: Customer): Observable<Customer> {
     return this.http.post<Customer>(`${environment.baseUrl}${this.urlService}`, customer);
+  }
+
+  getCustomer(customerId: number):Observable<Customer> {
+    return this.http.get<Customer>(`${environment.baseUrl}${this.urlService}/${customerId}`);
+  }
+
+  updateCustomer(id:number,customer: Customer):Observable<Customer> {
+    return this.http.put<Customer>(`${environment.baseUrl}${this.urlService}/${id}`,customer);
   }
 }

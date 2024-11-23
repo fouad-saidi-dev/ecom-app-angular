@@ -4,6 +4,7 @@ import {MatPaginator} from "@angular/material/paginator";
 import {MatSort} from "@angular/material/sort";
 import {MatTableDataSource} from "@angular/material/table";
 import {Customer} from "../../models/customer.model";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-list-customers',
@@ -13,8 +14,9 @@ import {Customer} from "../../models/customer.model";
 export class ListCustomersComponent implements OnInit {
   public customers: any;
   public dataSource: any;
-  public displayedColumns = ['id', 'name', 'email'];
-  constructor(private customersService:CustomersService) {
+  public displayedColumns = ['id', 'name', 'email','actions'];
+  constructor(private customersService:CustomersService,
+              private router:Router) {
   }
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
@@ -38,4 +40,11 @@ export class ListCustomersComponent implements OnInit {
     });
   }
 
+  deleteCustomer(id:number) {
+
+  }
+
+  editCustomer(id:number) {
+    this.router.navigateByUrl(`/admin/edit-customer/${id}`)
+  }
 }

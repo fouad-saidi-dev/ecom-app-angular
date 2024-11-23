@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GetCustomerComponent } from './get-customer.component';
+import { EditBillComponent } from './edit-bill.component';
 
-describe('GetCustomerComponent', () => {
-  let component: GetCustomerComponent;
-  let fixture: ComponentFixture<GetCustomerComponent>;
+describe('EditBillComponent', () => {
+  let component: EditBillComponent;
+  let fixture: ComponentFixture<EditBillComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [GetCustomerComponent]
+      declarations: [EditBillComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(GetCustomerComponent);
+    fixture = TestBed.createComponent(EditBillComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

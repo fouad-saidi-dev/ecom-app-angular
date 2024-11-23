@@ -2,9 +2,9 @@ mat-form-field {
   display: block;
 }
 .customer-form {
-  width: 600px;
+  width: 400px;
   flex: auto;
-  margin: 20px auto;
+  margin: auto;
 }
 mat-card-content{
   margin-top: 30px;
