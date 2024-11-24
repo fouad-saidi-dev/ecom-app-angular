@@ -26,4 +26,8 @@ export class CustomersService {
   updateCustomer(id:number,customer: Customer):Observable<Customer> {
     return this.http.put<Customer>(`${environment.baseUrl}${this.urlService}/${id}`,customer);
   }
+
+  deleteCustomer(id: number) {
+    return this.http.delete<Customer>(`${environment.baseUrl}${this.urlService}/${id}`);
+  }
 }

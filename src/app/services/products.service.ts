@@ -29,6 +29,6 @@ export class ProductsService {
   }
 
   deleteProduct(id: number) {
-
+    return this.http.delete<Product>(`${environment.baseUrl}${this.urlService}/${id}`);
   }
 }

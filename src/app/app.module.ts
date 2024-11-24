@@ -34,6 +34,7 @@ import { EditCustomerComponent } from './customers/edit-customer/edit-customer.c
 import { EditProductComponent } from './products/edit-product/edit-product.component';
 import { EditBillComponent } from './bills/edit-bill/edit-bill.component';
 import {MatProgressSpinner} from "@angular/material/progress-spinner";
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import {MatProgressSpinner} from "@angular/material/progress-spinner";
     NewProductComponent,
     EditCustomerComponent,
     EditProductComponent,
-    EditBillComponent
+    EditBillComponent,
+    ConfirmDialogComponent
   ],
   imports: [
     BrowserModule,
